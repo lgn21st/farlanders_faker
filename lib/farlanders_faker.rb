@@ -86,6 +86,7 @@ module FarlandersFaker
     
     def name(locale)
       init_names unless init_names?
+      locale = locale.to_sym
       locale = default_locale unless available_locales.include?(locale)
       
       format.rand.map do |key|
