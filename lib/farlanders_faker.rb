@@ -89,7 +89,7 @@ module FarlandersFaker
       locale = default_locale unless available_locales.include?(locale)
       
       format.rand.map do |key|
-        names[locale][key]
+        names[locale][key].rand
       end.join(' ').strip
     end
     
